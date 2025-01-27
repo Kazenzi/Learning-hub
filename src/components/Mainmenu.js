@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-import '../styles/app.css';
+// import '../styles/app.css';
 
 function Mainmenu() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -39,9 +39,9 @@ function Mainmenu() {
   };
 
   return (
-    <div className="topsearch"  style={{padding:"10px"}} > 
-      <div className="topsearch-bar">
-        <form onSubmit={doSearch}>
+    <div className="topsearch"  > 
+      <div className="topsearch-bar"style={ {marginLeft:"300px"}}>
+        <form onSubmit={doSearch}  >
           <input
             type="text"
             placeholder="Search...                                                          🔍"
@@ -52,11 +52,11 @@ function Mainmenu() {
         </form>
        
       </div>
-    <div className="mainmenu-container" style={{ height: 'auto', overflowY: 'hidden', overflowX: 'hidden' }}>
+    <div className="mainmenu-container" style={{ height: 'auto', width:'150vh' }}>
       
       
     
-      <div className="cards" style={{width:"100% "}} >
+      <div className="cards" style={{width:"1200% "}} >
   {[
     { 
       description: "Access resources to enhance your knowledge.", 
@@ -69,7 +69,7 @@ function Mainmenu() {
     { description: "Manage your finances effectively.", image: "/images/image5.png", link: "/financial" },
     { description: "Understand your legal rights and obligations.", image: "/images/image6.png", link: "/legal" }
   ].map((item, index) => (
-    <div  style={{height:"37vh"}}
+    <div  style={{height:"30vh"}}
       key={index} 
       className="card" 
       onClick={() => navigate(item.link)}
