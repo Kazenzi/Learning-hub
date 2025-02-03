@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
-// import '../styles/app.css';
+import '../styles/app.css';
 
 function Mainmenu() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -77,7 +77,7 @@ function Mainmenu() {
       <img src={item.image} alt="card image" className="card-image"  style={{width:"180px",height: "120px"}}/>
       <div className="card-content">
         <p className="card-description" style={{fontSize:"14px"}}>{item.description} </p>
-        <a href={item.link} className="read-more">View More</a>
+        <a href={item.link} className="read-more" style={{paddingLeft:"10px"}}>View More</a>
       </div>
     </div>
   ))}
