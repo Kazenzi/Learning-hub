@@ -28,7 +28,7 @@ p{
 }
 /* main menu styling */
 .landing-page {
-    background-image: url('../assets/landing-page.jpg');
+    /* background-image: url('../assets/landing-page.jpg'); */
     background-position: center;
     background-size: cover;
     display: flex;

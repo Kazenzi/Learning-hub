@@ -234,8 +234,9 @@
     letter-spacing: 0;
     line-height: normal;
     position: relative;
-    margin-left: 0%;
+    margin-left: 20%;
     white-space: nowrap;
+    
   }
   
   .landing-page .layer {
@@ -619,6 +620,11 @@
 .userway_buttons_wrapper{
   margin-bottom: 100px !important;
 }
+
+/* cardcontent */
+
+/* cardcontent */
+
 
 
 .landing-page .frame-40 {

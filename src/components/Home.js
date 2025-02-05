@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../styles/main.css';
 import { useNavigate } from "react-router-dom";
 import logo from '../assets/image.png'
-import icon from '../assets/logo.png'
+import icon from '../assets/Mawingu Foundation Logo.png'
 import Footer from "./Layout/Footer";
 import Mainmenu from "./Mainmenu";
 import SignInForm from "./SignIn";
@@ -145,7 +145,7 @@ const Home = () => {
             <div className="text-wrapper-8">
               <img className="Logo" alt="Logo" src={icon} height="80px" />
             </div>
-           <div className="text-wrapper-7" >Elimika na Mawingu</div> 
+           
  
             <div className='registerbtn' style={{ right:"20px",paddingleft:"900px"}}>
               <div className="button-container" style={{paddingLeft:"120px"}}>
