@@ -56,7 +56,7 @@ function Mainmenu() {
       
       
     
-      <div className="cards" style={{width:"1200% "}} >
+  <div className="cards" style={{width:"1200% "}} >
   {[
     { 
       description: "Access resources to enhance your knowledge.", 
