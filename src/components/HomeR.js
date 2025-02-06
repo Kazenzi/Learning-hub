@@ -17,15 +17,15 @@ import legal  from "../assets/Legal.png"
 function HomeR() {
   // Card content
   const topCards = [
-    { title: "Education", text: "This is card 1", image: educate },
-    { title: "Health", text: "This is card 2", image: health },
-    { title: "Social", text: "This is card 3", image: social },
+    { title: "Education", text: "Discover a wealth of resources designed to expand your knowledge and sharpen your skills. Whether you're learning a new subject or deepening your expertise, find the right tools to support your journey.", image: educate },
+    { title: "Health", text: "Stay informed on how to lead a healthier life with expert advice and wellness tips. From nutrition to mental well-being, explore guides that help you take charge of your health.", image: health },
+    { title: "Social", text: "Foster meaningful connections and build strong relationships within your community. Learn how to engage with others, improve communication, and create lasting bonds.", image: social },
   ];
 
   const bottomCards = [
-    { title: "Culture", text: "This is card 4", image: culture },
-    { title: "Financial", text: "This is card 5", image:finacial },
-    { title: "Legal", text: "This is card 6", image: legal },
+    { title: "Culture", text: "Immerse yourself in the richness of diverse traditions, arts, and customs from around the world. Gain a deeper appreciation for cultural heritage and its impact on society.", image: culture },
+    { title: "Financial", text: "Take control of your financial future with expert guidance on budgeting, saving, and investing. Learn practical strategies to achieve stability and grow your wealth.", image:finacial },
+    { title: "Legal", text: "Empower yourself with knowledge about your rights and legal protections. Access resources that help you navigate legal matters with confidence and clarity from experts", image: legal },
   ];
 
   // Defining search
@@ -125,13 +125,13 @@ function HomeR() {
 
       {/* Top Category Cards */}
       
-      <div className="cardstosp">
+      <div className="cardstosp" style={{paddingTop: "-20px"}}>
         <div style={cardContainerStyle}>
           {topCards.map((card, index) => (
             <div key={index} style={cardStyle}>
               <img src={card.image} alt={card.title} style={cardImageStyle} />
               <div style={{ padding: "15px" }}>
-                <h5>{card.title}</h5>
+                <h5 style={h2style}>{card.title}</h5>
                 <p style={cardTextStyle}>{card.text}</p>
                 <a href="#" style={cardButtonStyle}>Learn More</a>
               </div>
@@ -141,13 +141,13 @@ function HomeR() {
       </div>
 
       {/* Bottom Category Cards */}
-      <div className="cardstosp" style={{paddingTop:"20px"}}>
+      <div className="cardstosp" style={{paddingTop:"20px", }}>
         <div style={cardContainerStyle}>
           {bottomCards.map((card, index) => (
             <div key={index} style={cardStyle}>
               <img src={card.image} alt={card.title} style={cardImageStyle} />
               <div style={{ padding: "15px" }}>
-                <h5>{card.title}</h5>
+                <h5 style={h2style}>{card.title}</h5>
                 <p style={cardTextStyle}>{card.text}</p>
                 <a href="#" style={cardButtonStyle}>Learn More</a>
               </div>
@@ -185,6 +185,17 @@ const searchBarStyle = {
   color: "#B6BBC9",
   fontWeight: "700",
 };
+const h2style={
+    fontSize:"28px",
+    lineHeight: "35px",
+    color:"#012B45",
+    fontWeight:"900",
+    textAlign:"left",
+    
+
+};
+
+
 
 const mainHeadingStyle = {
   marginTop: "40px",
@@ -199,6 +210,7 @@ const paragraphStyle = {
   fontSize: "20px",
   lineHeight: "32px",
   textAlign: "left",
+ 
 };
 
 const miniContentTextStyle = {
@@ -239,20 +251,28 @@ const categoryHeadingStyle = {
 };
 
 const cardStyle = {
-  width: "18rem",
-  border: "1px solid #ddd",
-  borderRadius: "8px",
-  overflow: "hidden",
-  boxShadow: "2px 2px 10px rgba(0,0,0,0.1)",
+    width: "367px", // Set width to 367px as per the Figma design
+    height: "577px", // Set height to 577px to match the Figma card size
+    border: "1px solid #ddd",
+    borderRadius: "12px", // Adding rounded corners for consistency
+    overflow: "hidden",
+    boxShadow: "2px 2px 10px rgba(0,0,0,0.1)",
+    position: "relative", // To handle absolute positioning inside
 };
 
 const cardButtonStyle = {
   display: "inline-block",
   textDecoration: "none",
-  backgroundColor: "#007bff",
+  backgroundColor: "#3AB7E5",
   color: "#fff",
   padding: "10px 15px",
   borderRadius: "5px",
+  paddingTop:"10px",
+  borderRadius:"100px",
+  width:"253px",
+  height:'48px'
+ 
+
 };
 
 const cardContainerStyle = {
@@ -260,17 +280,24 @@ const cardContainerStyle = {
     gap: "20px",
     justifyContent: "center",
     flexWrap: "wrap",
+    marginLeft:"-170px"
   };
   
   const cardImageStyle = {
-    width: "100%",
-    height: "auto",
-    borderRadius: "8px 8px 0 0",
+    width: "367px",  // Match Figma image width
+  height: "270px", // Match Figma image height
+  borderRadius: "12px 12px 0 0", // Rounded corners at the top
+  objectFit: "cover",  // Ensure image fits correctly inside the box
   };
   
   const cardTextStyle = {
     fontSize: "14px",
-    color: "#555",
+    color: "#868686",
+    fontWeight:"400",
+    lineHeight: "24px",
+    textAlign:"left",
+    paddingTop: "10px",
+    paddingBottom: "20px"
   };
 
 export default HomeR;
